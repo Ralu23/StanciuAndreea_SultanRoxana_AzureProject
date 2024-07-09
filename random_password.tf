@@ -1,4 +1,5 @@
 resource "random_password" "example" {
-  length  = 16
+  count  = var.vm_count
+  length = 16
   special = true
 }
