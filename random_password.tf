@@ -1,5 +1,5 @@
-resource "random_password" "example" {
-  count  = var.vm_count
+resource "random_password" "password" {
   length = 16
   special = true
+  override_special = "!#$%&*()-_=+[]{}<>:?"
 }

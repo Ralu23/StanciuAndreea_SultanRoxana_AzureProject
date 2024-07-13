@@ -1,7 +1,7 @@
-resource "azurerm_public_ip" "example" {
+resource "azurerm_public_ip" "rg" {
   count               = var.vm_count
-  name                = "example-pip-${count.index}"
-  location            = azurerm_resource_group.example.location
-  resource_group_name = azurerm_resource_group.example.name
+  name                = "acceptanceTestPublicIp1-${count.index}"
+  location            = azurerm_resource_group.rg.location
+  resource_group_name = azurerm_resource_group.rg.name
   allocation_method   = "Dynamic"
 }
