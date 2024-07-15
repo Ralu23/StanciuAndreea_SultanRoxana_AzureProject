@@ -4,6 +4,10 @@ terraform {
     source = "hashicorp/azurerm"
     version = ">=3.0"
     }
+    null = {
+      source  = "hashicorp/null"
+      version = ">=3.0"
+    }
   }
   backend "azurerm" {
     subscription_id     = "65fed392-98d6-4bb6-a2bc-368b2f91cdcb"
